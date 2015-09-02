@@ -15,7 +15,7 @@ This is a Ruby client library for the [Deltacloud API](http://deltacloud.apache.
 ## Usage
 
 ```ruby
-require 'deltacloud/client'
+require 'deltacloud_vm/client'
 
 API_URL = "http://localhost:3001/api" # Deltacloud API endpoint
 
