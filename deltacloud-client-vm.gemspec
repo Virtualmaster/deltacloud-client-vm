@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "deltacloud-client-vm"
-  s.version     = '1.1.4.2'
+  s.version     = '1.1.4.3'
   s.authors     = ["Jiri Kaipr"]
   s.email       = ["jiri.kaipr@gmail.com"]
   s.homepage    = "https://github.com/virtualmaster/virtualmaster-cli"

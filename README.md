@@ -1,6 +1,8 @@
+This is a clone of the official deltacloud gem with a different module name.
+
 # deltacloud-client
 
-The DeltacloudVM project includes a Ruby client.  Other language-bindings
+The Deltacloud project includes a Ruby client.  Other language-bindings
 are possible and will be supported soon.  The client aims to insulate
 users from having to deal with HTTP and REST directly.
 
@@ -8,14 +10,14 @@ Each resource type has an associated model to ease usage.  Where
 resource reference other resources, natural navigation across the
 object model is possible.
 
-This is a Ruby client library for the [DeltacloudVM API](http://deltacloud.apache.org).
+This is a Ruby client library for the [Deltacloud API](http://deltacloud.apache.org).
 
 ## Usage
 
 ```ruby
 require 'deltacloud/client'
 
-API_URL = "http://localhost:3001/api" # DeltacloudVM API endpoint
+API_URL = "http://localhost:3001/api" # Deltacloud API endpoint
 
 # Simple use-cases
 client = DeltacloudVM::Client(API_URL, 'mockuser', 'mockpassword')
@@ -29,7 +31,7 @@ inst.reboot!  # Reboot instance
 
 # Advanced usage
 
-# DeltacloudVM API supports changing driver per-request:
+# Deltacloud API supports changing driver per-request:
 
 client.use(:ec2, 'API_KEY', 'API_SECRET').instances # List EC2 instances
 client.use(:openstack, 'admin@tenant', 'password', KEYSTONE_URL).instances # List Openstack instances
@@ -37,7 +39,7 @@ client.use(:openstack, 'admin@tenant', 'password', KEYSTONE_URL).instances # Lis
 ```
 # Want help?
 
-## Adding new DeltacloudVM collection to client
+## Adding new Deltacloud collection to client
 
 ```
 $ rake generate[YOUR_COLLECTION] # eg. 'storage_snapshot'
@@ -52,7 +54,7 @@ $ rake generate[YOUR_COLLECTION] # eg. 'storage_snapshot'
   methods. Model methods should really be just a syntax sugar and exercise
   the *DeltacloudVM::Client::Methods* methods.
   The purpose of *model* class life is to deserialize XML body received
-  from DeltacloudVM API to a Ruby class.
+  from Deltacloud API to a Ruby class.
 
 ## Debugging a nasty bug?
 
